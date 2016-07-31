@@ -1,9 +1,10 @@
 .zysContainer {
-  border: 1px solid blue;
+  border: none;
   overflow: hidden;
 }
 
 .zysContainer .column {
+  box-sizing: border-box;
   float: left;
   min-width: 100px;
   min-height: 100px;

@@ -5,11 +5,13 @@ function MYSelection(id, options) {
   this.selectedValues = [];
   this.bindEvents();
 }
+
 MYSelection.prototype.buildElments = function() {
   this.rootElement.addClass('zysContainer');
   this.buildColumns();
   this.populateFirstColumn();
 };
+
 MYSelection.prototype.buildColumns = function() {
   var columnsCount = 1;
   if (this.options && this.options.apis && Array.isArray(this.options.apis)) {
@@ -24,6 +26,7 @@ MYSelection.prototype.buildColumns = function() {
   }, this);
   this.rootElement.append($("<div style='clear:both;'></div>"));
 };
+
 MYSelection.prototype.populateFirstColumn = function() {
   var that = this;
   if (this.options && this.options.apis[0]) {
@@ -44,7 +47,9 @@ MYSelection.prototype.fetchItemData = function(api, callback) {
     if (parser) {
       data = parser(data);
     }
-    callback && callback(data);
+    if(callback) {
+      callback(data);
+    }
   });
 };
 
