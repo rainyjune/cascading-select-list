@@ -19,6 +19,10 @@
   padding: 0;
 }
 
+.zysContainer .column ul li {
+  cursor: pointer;
+}
+
 .zysContainer .column ul li.active {
   background-color: lightgray;
 }
