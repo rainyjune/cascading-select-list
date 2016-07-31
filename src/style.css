@@ -1,0 +1,23 @@
+.zysContainer {
+  border: 1px solid blue;
+  overflow: hidden;
+}
+
+.zysContainer .column {
+  float: left;
+  min-width: 100px;
+  min-height: 100px;
+  height: 200px;
+  border: 1px solid gray;
+  margin-right: 5px;
+  overflow-y: auto;
+}
+
+.zysContainer .column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.zysContainer .column ul li.active {
+  background-color: lightgray;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Dev</title>
+    <link rel="stylesheet" type="text/css" href="../src/style.css" />
+  </head>
+  <body>
+    <div id="myDiv">
+    </div>
+    <script src="../vendor/jquery-1.11.3.min.js"></script>
+    <script src="../src/select.js"></script>
+    <script>
+      $(function(){
+        var options = {
+          apis: ['./data/first.json', './data/second{id}.json', './data/third{id}.json']
+        };
+        var myObj = new MYSelection('myDiv', options);
+        myObj.addEventListener('changed', function(event, first, second, third){
+          console.log('event:', event);
+          //debugger;
+        });
+      });
+    </script>
+  </body>
+</html>
